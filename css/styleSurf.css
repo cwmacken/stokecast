@@ -1,0 +1,196 @@
+/*.fixed{
+	position: fixed;
+}*/
+
+
+.dropStyle{
+	font-size: 47%;
+
+}
+.blogStyle{
+	font-size: 139%;
+}
+
+.mainTitle{
+	font-size: 3em;
+
+}
+.subTitle{
+	font-size: 2em;
+	
+
+
+}
+.modSource{
+	font-size: 10px;
+}
+#modSourceLink{
+	color: #333;
+	font-size: 10px;
+}
+.subSubTitle{
+	font-size: 1.5em;
+
+}
+
+.tidePlacement{
+	height: 464px;
+	width: 350px;
+
+}
+body{
+	font-family: 'Russo One', sans-serif;
+	margin-top: 50px;
+	background-color:white;
+	}
+h1{
+	font-size: 3em;
+	font-weight: bold;
+}
+/*.titleStyle{
+	font-size: 3em;
+
+}*/
+.menuStyle{
+	font-size: 1em;
+
+}
+.dropdown{
+	font-size: 3em;
+
+}
+.navbar-inverse .glyphicon {
+	color: #fff;
+}
+.container{
+	background-color: white;
+
+
+}
+.CTF{
+	width: 1000px;
+	height: 541px;
+}
+
+/*.dropdown-menu{
+	width: 100%;
+
+}*/
+.header{
+	background-color: #6B6B6B;
+	
+	color: white;
+	font-weight: bold;
+	/*font-family: helvetica, sans-serif;*/
+	margin-left: 0;
+	position: fixed;
+	z-index: 2;
+
+		
+}
+/*#d0,#d1,#d2,#d3,#d4,#d5,#d6,#d7,#d8,#d9,#d10,#d11,#d12,#d13,#d14,#d15,#d16,#d17,#d18,#d19,#d20,#d21,#d22,#d22,#d23,#d24,#d25,#d26,#d27,#d28,#d29,#d30,#d31,#d32{
+	font-size: 1.2em;*/
+
+}
+/*.subTitle{
+	font-size: 3em;
+
+}*/
+
+.pushDown{
+	height: 168px;
+	width: auto;
+
+
+}
+
+.navStyle{
+	list-style-type: none;
+	text-decoration: none;
+	margin-left: 0%;
+	margin-right: 0%;
+	font-size: 1.5em;	
+}
+#tide{
+	margin-left:-10px;
+	width: 100%;
+}
+
+a{
+	color:white; 
+	text-decoration: none;
+}
+a:hover{
+}
+
+a:visited{
+	color:white; 
+
+}
+
+.report{
+
+height: 3500px;
+
+}
+
+/*.tide{
+	
+	height:1500px;
+}*/
+.tideColor ul li:nth-child(odd) {
+	background-color: #efefef;
+
+
+}
+.tidePredictFormat{
+	list-style-type: none;
+	padding: 10px 10px 10px 10px;
+
+
+}
+.ncWind{
+	padding-bottom: 25px;
+}
+
+.topWind{
+	padding-top: 25px;
+}
+.phoneYes{
+		display: none;
+		margin-left: 4%;
+}
+
+@media only screen and (min-width:767px){
+	.phoneNo{
+		display: inherit;
+
+	}
+	.tidemove{
+		padding-left: 7%
+	}
+	.phoneYes{
+		display: none;
+	}
+
+}
+
+@media only screen and (min-width:993px){
+	.phoneNo{
+		display: inherit;
+	}
+	.tidemove{
+		padding-left: 4%
+	}
+	.phoneYes{
+		display: none;
+	}
+	.sizeFix{
+		width: 65%
+	}
+	.sizeFixCC{
+		width: 45%
+	}
+}
+
+

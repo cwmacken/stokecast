@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StokeCast Monterey Bay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/styleSurf.css">
+    <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    
+ 
+
+
+
+
+<div class="header col-xs-12">      
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">STOKECAST</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle dropStyle" data-toggle="dropdown">REPORT<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="scroll" href="#swell">SWELL OVERVIEW</a>
+              </li>
+              <li>
+                <a class="scroll" href="#tidesel">CURRENT TIDE</a>
+              </li>
+              <li>
+                <a class="scroll" href="#cc">CURRENT CONDITIONS</a>
+              </li>
+              <li>
+                <a class="scroll" href="#wind">CURRENT WIND</a>
+              </li>
+              <li>
+                <a class="scroll" href="#swellDetailed">SWELL DETAILED</a>
+              </li>
+              <li>
+                <a class="scroll" href="#tideForecast">TIDE FORECAST</a>
+              </li>
+              <li>
+                <a class="scroll" href="#swellForecast">SWELL FORECAST</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle dropStyle" data-toggle="dropdown">REGIONS<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="scroll" href="nc.html">NORTHERN CALIFORNIA</a>
+              </li>
+              <li>
+                <a class="scroll" href="sf.html">SAN FRANCISCO</a>
+              </li>
+              
+              <li>
+                <a class="scroll" href="cc.html">CENTRAL CALIFORNIA</a>
+              </li>
+              <li>
+                <a class="scroll" href="sb.html">SANTA BARBARA</a>
+              </li>
+              <li>
+                <a class="scroll" href="la.html">LOS ANGELES</a>
+              </li>
+              <li>
+                <a class="scroll" href="oc.html">ORANGE COUNTY</a>
+              </li>
+              <li>
+                <a class="scroll" href="sd.html">SAN DIEGO</a>
+              </li>
+            </ul>
+          </li>
+           <li>
+                <a class="blogStyle" href="http://blog.stokecast.com/">BLOG</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+  </div>
+  <div class="container pagination-centered">
+    <!-- <div class="row">
+      <div class="pushDown"></div>
+    </div> -->
+    <div class="row">
+      <div class="text-center mainTitle">
+        Monterey Bay
+      </div>
+    </div>
+    <div class="row">
+      <div class="modSource col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-8">
+          Swell map courtesy of <a id="modSourceLink"href="http://cdip.ucsd.edu/?nav=recent&sub=nowcast&xitem=socal_now">CDIP</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="" id="swell">
+        <img class="sizeFix col-xs-12 img-responsive col-md-8 col-md-offset-2" src="http://cdip.ucsd.edu/recent/model_images/monterey.png" width="639" height="790" alt="Monterey Bay swell model" title="Monterey Bay swell model">
+      </div>
+    </div>
+    <div class="row phoneYes">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4 tideSelector">
+        <script class="img-responsive" type="text/javascript" src="http://tides.tidegraph.com/api/tidegraph.php?bg=white&scale=1&lat=34.0083&lng=-118.5"></script>
+      </div>
+      <div class="col-xs-4"></div>
+      
+    </div>
+    <div class="row phoneNo">
+        <div class="col-xs-10 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-4 tideSelector tidemove" id="tidesel">
+        <iframe class="img-responsive tidePlacement" src="http://tides.tidegraph.com/api/plot.php?bg=white&scale=.9&lat=36.8017&lng=-121.7867" frameborder="0">
+        </iframe> 
+        </div>
+    </div>
+    <div class="row">
+      <div class="modSource col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-8">
+          Tide graph courtesy of <a id="modSourceLink"href="http://www.tidegraph.com/">TIDE GRAPH</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-3 col-lg-8 col-lg-offset-3" id="cc">
+        <p class="subTitle">Current Conditions</p>
+
+      <p></p>
+
+        <p class="subSubTitle">Wind: <span id="windStatus"></span></p>
+
+      <p>
+      Direction: <span id="windDir"></span></p>
+
+      <p>
+      Gusts(MPH): <span id="windSpd"></span></p>
+
+        
+      </div>
+    </div>  
+    <div class="row">
+      <div class="modSource col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-8">
+          Wind data courtesy of <a id="modSourceLink"href="http://www.wunderground.com/">WUNDERGROUND</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="" id="wind">
+            <img class=" col-xs-12 img-responsive sizeFix col-md-8 col-md-offset-2 ncWind" src="http://www.iwindsurf.com/cgi-bin/mapperv2.jpg?regionID=128&regionProductID=1&date=-1&websiteID=1&tid=453&hid=87086733&rid=431555173" width="550" height="555" alt="The wind map is currently unavailable :(" title="Current Central California wind conditions" />
+        </div>
+    </div>
+        <div class="row">
+      <div class="modSource col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-8">
+          Wind map courtesy of <a id="modSourceLink"href="http://www.iwindsurf.com/">IWINDSURF</a>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="" id="wind">
+            <img class=" col-xs-12 img-responsive sizeFix col-md-8 col-md-offset-2" src="http://oceandatacenter.ucsc.edu/cimt/winds/winds.gif" width="468" height="416" alt="The wind map is currently unavailable :(" title="Current Monterey wind conditions" />
+        </div>
+    </div> -->
+    <div>
+    </div>
+    <!-- <div class="row">
+      <div class="" id="swellDetailed">
+        <img class=" sizeFix col-xs-12 img-responsive col-md-8 col-md-offset-2" src="http://cdip.ucsd.edu/recent/model_images/santa_monica.png" width="851" height="544" alt="Santa Monica swell model" title="Santa Monica swell model"/>
+      </div>
+    </div> -->
+    <div class="row">
+      
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 tideColor" id="tideForecast">
+          <p class="subTitle">Tide Forecast</p>
+
+          <p class="subSubTitle">Santa Cruz</p>
+        <ul>
+          <li class="tidePredictFormat">
+            <span id="t0"></span> <span id="h0"></span> &#64; <span id="d0"></span>
+          </li>     
+          <li class="tidePredictFormat">
+            <span id="t1"></span> <span id="h1"></span> &#64; <span id="d1"></span>
+          </li>    
+          <li class="tidePredictFormat">
+            <span id="t2"></span> <span id="h2"></span> &#64; <span id="d2"></span>
+          </li>    
+          <li class="tidePredictFormat">
+            <span id="t3"></span> <span id="h3"></span> &#64; <span id="d3"></span>
+          </li>
+          <li class="tidePredictFormat">
+            <span id="t4"></span> <span id="h4"></span> &#64; <span id="d4"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t5"></span> <span id="h5"></span> &#64; <span id="d5"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t6"></span> <span id="h6"></span> &#64; <span id="d6"></span></li>    
+          <li class="tidePredictFormat">
+            <span id="t7"></span> <span id="h7"></span> &#64; <span id="d7"></span></li>   
+          <li class="tidePredictFormat">
+            <span id="t8"></span> <span id="h8"></span> &#64; <span id="d8"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t9"></span> <span id="h9"></span> &#64; <span id="d9"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t10"></span> <span id="h10"></span> &#64; <span id="d10"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t11"></span> <span id="h11"></span> &#64; <span id="d11"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t12"></span> <span id="h12"></span> &#64; <span id="d12"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t13"></span> <span id="h13"></span> &#64; <span id="d13"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t14"></span> <span id="h14"></span> &#64; <span id="d14"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t15"></span> <span id="h15"></span> &#64; <span id="d15"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t16"></span> <span id="h16"></span> &#64; <span id="d16"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t17"></span> <span id="h17"></span> &#64; <span id="d17"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t18"></span> <span id="h18"></span> &#64; <span id="d18"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t19"></span> <span id="h19"></span> &#64; <span id="d19"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t20"></span> <span id="h20"></span> &#64; <span id="d20"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t21"></span> <span id="h21"></span> &#64; <span id="d21"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t22"></span> <span id="h22"></span> &#64; <span id="d22"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t23"></span> <span id="h23"></span> &#64; <span id="d23"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t24"></span> <span id="h24"></span> &#64; <span id="d24"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t25"></span> <span id="h25"></span> &#64; <span id="d25"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t26"></span> <span id="h26"></span> &#64; <span id="d26"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t27"></span> <span id="h27"></span> &#64; <span id="d27"></span></li> 
+          <li class="tidePredictFormat">
+            <span id="t28"></span> <span id="h28"></span> &#64; <span id="d28"></span></li>  
+          <li class="tidePredictFormat">
+            <span id="t29"></span> <span id="h29"></span> &#64; <span id="d29"></span></li>
+        </ul>      
+      </div>
+    <div class="row">
+      <div class="modSource col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-8">
+          Tide data map courtesy of <a id="modSourceLink"href="http://www.wunderground.com/">WUNDERGROUND</a>
+      </div>
+    </div>
+    </div>
+    <!-- <div class="row">
+        <iframe class="col-xs-12 tide c" id="tideForecast" src="http://wap.swellwatch.com/tideStation.php?dataPoint=8401&region=1422&regionName=Southern+California&trace=region:1092:The%20World%7Cregion:1641:North%20American%20West%20Coast%7CforecasterReport:1422:Southern%20California%7Cregion:1422:Southern%20California">
+        </iframe>
+    </div> -->
+    <div class="row">
+        <iframe class="col-xs-12 col-sm-10 col-sm-offset-1 report" id="swellForecast" src="http://wap.swellwatch.com/forecasterReport.php?dataPoint=40724&region=1421&regionName=Central+California&trace=region:1092:The%20World|region:1641:North%20American%20West%20Coast|forecasterReport:0:|region:1421:Central%20California"
+        frameborder="0">
+        </iframe> 
+    </div>
+  </div>  
+  <div class="row">
+      <div class="modSource col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-9">
+        Surf Report courtesy of <a id="modSourceLink"href="http://forecasts.surfingmagazine.com/">WETSAND</a>
+      </div>
+  </div>    
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/mb.js"></script>
+    <!-- <nav class="navbar navbar-default" role="navigation"></nav> -->
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43909927-2']);
+  _gaq.push(['_setDomainName', 'stokecast.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>
